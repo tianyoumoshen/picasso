@@ -609,7 +609,7 @@ public class RequestCreatorTest {
 
   @Test public void nullAdditionalMemoryPolicy() {
     try {
-      new RequestCreator().memoryPolicy(MemoryPolicy.NO_CACHE, null);
+      new RequestCreator().memoryPolicy(MemoryPolicy.NO_CACHE, (MemoryPolicy) null);
       fail("Null additional memory policy should throw exception.");
     } catch (IllegalArgumentException ignored) {
     }
@@ -633,7 +633,7 @@ public class RequestCreatorTest {
 
   @Test public void nullAdditionalNetworkPolicy() {
     try {
-      new RequestCreator().networkPolicy(NetworkPolicy.NO_CACHE, null);
+      new RequestCreator().networkPolicy(NetworkPolicy.NO_CACHE, (NetworkPolicy) null);
       fail("Null additional network policy should throw exception.");
     } catch (IllegalArgumentException ignored) {
     }
